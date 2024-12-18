@@ -1,0 +1,62 @@
+\begin{frame}
+  \frametitle{Characteristic equation}
+    \begin{multline}
+        \label{eq:approximate-characteristic-equation}
+        \psi_{g,r}(s_k, t) = \psi_{g,r}(0, t) e^{-\Sig(t)s_k}  + \int_0^{s_k}
+        Q_{g,r}(s_k', t) e^{-\Sig(t)[s_k - s_k']} ds_k'\\
+        - \ppt I_{g,r}(s_{k},t)
+    \end{multline}
+    where $\ppt I_{g,r}(s_{k},t) = \frac{1}{\overline{v_g}} \int_0^{s_k} \ppt \psi_{g,r}(s_k', t)
+        e^{-\Sig(t)[s_k-s_k']} ds_k'$.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Flat Source Approximation}
+    We resolve the source integral by assuming
+    \begin{equation}
+        Q_{g,r}(s^*,t) \approx \Qbar(t) = \frac{1}{l_{k,r}}\int_0^{l_{k,r}}
+        Q_{g,r}(s_k', t) d s_k' \text{, for any } s^* \in [0, l_{k,r}]
+    \end{equation} 
+    This is called the {\bf Flat Source Approximation}.
+
+    To enforce this, we remove spatial dependence from Equations \ref{eq:source} 
+    and \ref{eq:precursors}:
+
+    \begin{equation}
+        \label{eq:flat-source}
+        \Qbar(t) = \frac{\chi_{g}^p}{4\pi} \sum_{g=1}^G
+        \overline{\nu_{p}\Sigma_{f,g,r}}(t)\phibar(t) +
+        \frac{1}{4\pi}\sum_{g'=1}^G
+    \overline{\Sigma}_{s,g'\rightarrow g, r}(t) \overline{\phi_{g',r}}(t) +
+        \sum_m \chi^d_{g} \lambda_m \overline{C_{r,m}}(t)
+        %S^d_{g,r}(t)
+    \end{equation}
+    \begin{equation}
+        \label{eq:dnp-eq-flat}
+        \ddt \overline{C_{r,m}}(t) = \sum_{g=1}^G\beta_m
+        \overline{\nu\Sigma_{g,r}^f}(t)\overline{\phi_{g,r}}(t) - \lambda_m
+        \overline{C_{r,m}}(t)
+    \end{equation}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Angular flux propogation equation}
+  After applying the flat source approximation to Equation
+  \ref{eq:approximate-characteristic-equation}, we can use some algebra to get
+  an expression for the change in scalar flux over a source region:
+  \begin{equation}
+        \label{eq:flat-characteristic-equation-delta}
+        \boxed{
+        \Delta \psi_{g,r}(s_k,t) = \left(
+        \psi_{g,r}(0, t) - \frac{\Qbar(t)}{\Sig(t)}\right)F_1(s_k,t) + \ppt I_{g,r}(s_k, t)
+        }
+  \end{equation}
+  where $F_1(s_{k},t) \equiv 1 - e^{-\Sig(t) s_{k}}$
+
+  Note that $\Delta \psi_{g,r}(s_{k},t) = \psi_{g,r}(0,t) - \psi(s_{k},t)$. This
+  is the convention in the literature.
+\end{frame}
+
+
+
+

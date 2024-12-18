@@ -1,0 +1,48 @@
+\begin{frame}
+  \frametitle{Solving for $\psi_{g,r}(s_{k},t)$}
+    \begin{itemize}
+        \item The MOC/TRRM solution begins with the {\it characteristic
+            equation}, a partial solution to Equation \ref{eq:nte} for
+            $\psi_{g,r}(s_{k},t)$. This
+            expression contains integratls of $Q_{g,r}(s_{k},t)$ and
+            $\ppt \psi_{g,r}(s_{k},t)$
+            with respect to $s_{k}$.
+        \item To obtain a closed form expression for $\psi_{g,r}(s_{k},t)$, we
+            must make evaluate the integrals with an appropriate approxmation
+            for $Q_{g,r}(s_{k},t)$ and $\ppt \psi_{g,r}(s_{k},t)$
+        \item The {\bf flat source approximation} is a common and mathematically
+            simple choice to resolve the $Q_{g,r}(s_{k},t)$ integral
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Scalar Flux Solution}
+    With the flat source approximation, we can get a closed form solution for
+    the scalar flux in each region by applying some clever algebra to Equation
+    \ref{eq:nte}: 
+    \begin{equation}
+        \label{eq:scalar-flux-cell-averaged-flat}
+        \overline{\phi}_{g,r}(t) = \frac{4\pi}{\Sig(t)} \left[\Qbar(t) +
+        \frac{1}{V_r}\sum_k \omega_k \Delta \psi_{g,r}(t) \right] -
+        \frac{1}{\Sig(t)\overline{v_g}} \ddt \overline{\phi}_{g,r}(t)
+    \end{equation}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Source Derivative Propogation}
+  Source Derivative Propogation \cite{hoffman_td_2013} is a method to resovle
+  the $\ppt \psi_{g,r}(s_{k},t)$ integral. It works by formulating an
+  equation equivalent to the characteristic equation
+  (Eq. \ref{eq:flat-characteristic-equation-delta}) for $\ppt
+  \psi(s_{k},t)$. We propogate $\ppt \psi(s_{k},t)$ along
+  characteristics like we do with $\psi(s_{k},t)$
+
+  This time-derviative characteristic equation is obtained by
+  \begin{enumerate}
+      \item Taking the time-derivative of Equation \ref{eq:flat-characteristic-equation-delta}
+      \item Making an approximation for the $\ppptt \psi_{s_{k},t}$ term.
+      \item Using the resulting equation to solve for the integral term
+  \end{enumerate}
+\end{frame}
+
+

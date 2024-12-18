@@ -1,0 +1,19 @@
+\begin{frame}
+  \frametitle{Results}
+
+  I implemented the SDP time-dependent random ray in OpenMC, which already has
+  an existing random ray solver.
+
+  Unfortunately,  my implementation seems to be numerically unstable as well as
+  incorrect. The solution begins to blow up after one timestep, even on a simple 
+  pincell geometry.
+
+  Two possibilities
+  \begin{itemize}
+      \item Implementation errors
+      \item Numerical instability inherent to the method OR to my approach to
+          the implementation
+  \end{itemize}
+\end{frame}
+
+

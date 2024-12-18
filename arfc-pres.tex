@@ -7,15 +7,16 @@
 \documentclass[9pt]{beamer}
 \usetheme[white]{Illinois}
 %\title[short title]{long title}
-\title[Short Title]{A Very Very Long Title for a Presentation about Cats}
+\title[Short Title]{Time-dependent random ray method via Source Derivative
+Propogation}
 %\subtitle[short subtitle]{long subtitle}
-\subtitle[Short SubTitle]{Mostly Kittens}
+\subtitle[Short SubTitle]{NPRE 560 Final Project}
 %\author[short name]{long name}
-\author[Your Name]{Your Name\\Advanced Reactors and Fuel Cycles Group}
+\author[Your Name]{Olek Yardas}
 %\date[short date]{long date}
-\date[04.01.2100]{April 1, 2100}
+\date[04.01.2100]{December 18, 2024}
 %\institution[short name]{long name}
-\institute[UIUC]{University of Illinois at Urbana-Champaign}
+\institute[UIUC]{University of Illinois Urbana-Champaign}
 
 %\usepackage{bbding}
 \usepackage{amsfonts}
@@ -27,6 +28,8 @@
 \usepackage{microtype} % if using PDF
 \usepackage{bigints}
 \usepackage{minted}
+\usepackage{algorithmic}
+\usepackage{algorithm}
 
 \newcommand{\units}[1] {\:\text{#1}}%
 \newcommand{\SN}{S$_N$}%{S$_\text{N}$}%{$S_N$}%
@@ -40,6 +43,7 @@
 
 \usepackage[acronym,toc]{glossaries}
 \include{acros}
+\include{newcommands}
 
 \makeglossaries
 
@@ -92,19 +96,27 @@
 \end{frame}
 }
 
-\section{Motivation}
-\subsection{Cat Behavior}
-\input{cat_behavior}
-\subsection{Cat Appearance}
-\input{cat_appearance}
-\subsection{Cat Math}
-\input{cat_math}
+\section{Background}
+\subsection{Method of Characteristics}
+\input{1.1_moc}
+\subsection{Random Ray Method}
+\input{1.2_rr}
 \section{Methods}
-\subsection{Illinois Colors}
-\input{fierce}
+\subsection{Time-dependent neutron transport equation}
+\input{2.1_nte_td}
+\subsection{Source Derivative Propogation}
+\input{2.2_sdp}
+\section{Results}
+\subsection{Model}
+\input{3.1_model}
+\subsection{Results}
+\input{3.2_results}
 \section{Conclusion}
 \input{conclusion}
-\input{acks}
+\section{Appendix}
+\subsection{Characteristic Equation}
+\input{a1_characteristic_equation}
+
 %%--------------------------------%%
 %%--------------------------------%%
 \begin{frame}[allowframebreaks]

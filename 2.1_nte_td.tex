@@ -1,0 +1,23 @@
+\begin{frame}
+  \frametitle{Time-dependent neutron transport equation}
+    With discrete energy groups, isotropic scattering, and the characteristic
+    transform applied, the time-dependent neutron transport equation coupled
+    to delayed neutron precursors can be written as:
+    \begin{equation}
+        \label{eq:nte}
+        \frac{1}{\overline{v_g}}\ppt \psi_g(\sOt) = -\hat{\Omega}\cdot \nabla\psi_g(\sOt) -
+        \overline{\Sigma^t_g}(s_{k}, t)\psi_g(\sOt) + Q_g(s_{k}, t)
+    \end{equation}
+    \begin{equation} Q_g(s_{k}, t) = \frac{\chi_g^p}{4\pi} \sum_{g=1}^G
+        \label{eq:source}
+        \overline{\nu_{p}\Sigma^f_g}(s_{k}, t)\phi_g(s_{k}, t) + \frac{1}{4\pi}\sum_{g'=1}^G
+        \overline{\Sigma^s_{g'\rightarrow g}}(s_{k}, t) \phi_{g'}(s_{k}, t) +
+        \sum_m \chi^d_g \lambda_m C_m(s_{k}, t)
+    \end{equation}. 
+    \begin{equation}
+        \label{eq:precursors}
+        \ppt C_m(s_{k}, t) = \sum_{g=1}^G
+        \overline{\nu_{d,m}\Sigma_g^f}(s_{k},t)\phi_g(s_{k}, t) - \lambda_m
+        C_m(s_{k},t)
+    \end{equation}
+\end{frame}
